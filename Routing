@@ -1,0 +1,13 @@
+Routing helps you to define a URL structure and map the URL with the controller.
+
+For instance let’s say we want that when a user types “http://localhost/View/ViewCustomer/”, 
+it goes to the “Customer” Controller and invokes the DisplayCustomer action. 
+This is defined by adding an entry in to the routes collection using the maproute function. 
+Below is the underlined code which shows how the URL structure and mapping with controller and action is defined.
+
+Hide   Copy Code
+routes.MapRoute(
+               "View", // Route name
+               "View/ViewCustomer/{id}", // URL with parameters
+               new { controller = "Customer", action = "DisplayCustomer", 
+id = UrlParameter.Optional }); // Parameter defaults   
